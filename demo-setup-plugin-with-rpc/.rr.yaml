@@ -1,0 +1,25 @@
+version: "3"
+
+server:
+  command: "php src/psr-worker.php"
+
+rpc:
+  listen: tcp://127.0.0.1:6001
+
+http:
+  address: 0.0.0.0:8080
+  pool:
+    num_workers: 2
+  middleware:
+    - "roadrunner_demo_middleware"
+
+roadrunner_demo_plugin:
+  message: "Hello Plugin"
+
+plugin_with_rpc:
+  message: "Result"
+
+# do not use development mode in production
+logs:
+  level: debug
+  mode: development

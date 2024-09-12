@@ -1,0 +1,16 @@
+version: "3"
+
+server:
+  command: "php src/psr-worker.php"
+
+http:
+  address: 0.0.0.0:8080
+  pool:
+    num_workers: 2
+  middleware:
+    - "roadrunner_demo_middleware"
+
+# do not use development mode in production
+logs:
+  level: debug
+  mode: development

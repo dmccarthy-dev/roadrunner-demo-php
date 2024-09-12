@@ -1,0 +1,16 @@
+{
+    "name": "roadrunnerdemo/php",
+    "type": "roadrunner-demo",
+    "autoload": {
+        "psr-4": {
+            "Roadrunnerdemo\\Php\\": "src/"
+        }
+    },
+    "authors": [],
+    "require": {
+        "spiral/roadrunner-cli": "^2.6",
+        "nyholm/psr7": "^1.8",
+        "spiral/roadrunner-http": "^3.5",
+        "spiral/goridge": "^4.2"
+    }
+}
